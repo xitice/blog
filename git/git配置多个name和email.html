@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>利用git config 配置全局、目录、仓库及的用户名和邮箱 | UNLIMIT</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/blog/logo.jpg">
+    <meta name="description" content="UNLIMIT SITE">
+    <link rel="preload" href="/blog/assets/css/0.styles.b89722a2.css" as="style"><link rel="preload" href="/blog/assets/js/app.00ee79c7.js" as="script"><link rel="preload" href="/blog/assets/js/2.e21738d3.js" as="script"><link rel="preload" href="/blog/assets/js/7.e96cff46.js" as="script"><link rel="prefetch" href="/blog/assets/js/3.11572a76.js"><link rel="prefetch" href="/blog/assets/js/4.9feeae3b.js"><link rel="prefetch" href="/blog/assets/js/5.b9f7aaed.js"><link rel="prefetch" href="/blog/assets/js/6.850c3a2f.js"><link rel="prefetch" href="/blog/assets/js/8.5cf1a826.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b89722a2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">UNLIMIT</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/blog/frontEnd/" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/blog/thinking/" class="nav-link">
+  Thinking
+</a></div><div class="nav-item"><a href="/blog/git/" class="nav-link router-link-active">
+  git
+</a></div> <a href="https://github.com/xitice/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/blog/frontEnd/" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/blog/thinking/" class="nav-link">
+  Thinking
+</a></div><div class="nav-item"><a href="/blog/git/" class="nav-link router-link-active">
+  git
+</a></div> <a href="https://github.com/xitice/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/blog/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/blog/git/更新代码.html" class="sidebar-link">更新代码</a></li><li><a href="/blog/git/git配置多个name和email.html" class="active sidebar-link">git配置多个name和email</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/git/git配置多个name和email.html#为什么要配置不同的用户名和邮箱？" class="sidebar-link">为什么要配置不同的用户名和邮箱？</a></li><li class="sidebar-sub-header"><a href="/blog/git/git配置多个name和email.html#全局配置" class="sidebar-link">全局配置</a></li><li class="sidebar-sub-header"><a href="/blog/git/git配置多个name和email.html#仓库及配置" class="sidebar-link">仓库及配置</a></li><li class="sidebar-sub-header"><a href="/blog/git/git配置多个name和email.html#利用-include-includeif-实现不同文件夹下不同的git配置" class="sidebar-link">利用 include/includeif 实现不同文件夹下不同的git配置</a></li><li class="sidebar-sub-header"><a href="/blog/git/git配置多个name和email.html#验证" class="sidebar-link">验证</a></li><li class="sidebar-sub-header"><a href="/blog/git/git配置多个name和email.html#git-查找-user-name-和-user-email-的规则" class="sidebar-link">git 查找 user.name 和 user.email 的规则</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="利用git-config-配置全局、目录、仓库及的用户名和邮箱"><a href="#利用git-config-配置全局、目录、仓库及的用户名和邮箱" class="header-anchor">#</a> 利用git config 配置全局、目录、仓库及的用户名和邮箱</h1> <h2 id="为什么要配置不同的用户名和邮箱？"><a href="#为什么要配置不同的用户名和邮箱？" class="header-anchor">#</a> 为什么要配置不同的用户名和邮箱？</h2> <ul><li>一般资料、环境最齐全的就一台电脑</li> <li>我们除了要提交公司的代码，还要往自己的 git 平台提交代码</li> <li>两个代码管理平台需要用不同的邮箱，是保护公司，也是保护自己</li></ul> <h2 id="全局配置"><a href="#全局配置" class="header-anchor">#</a> 全局配置</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">git</span> config --global user.name <span class="token string">&quot;your username&quot;</span>
+<span class="token function">git</span> config --global user.email <span class="token string">&quot;yout email&quot;</span>
+</code></pre></div><p>这种配置方法，在当前计算机生效，在 <code>user/currentUser</code> 目录下生成.gitconfig文件
+但是这种配置会使你在任何仓库提交都是一个 name 和 email</p> <h2 id="仓库及配置"><a href="#仓库及配置" class="header-anchor">#</a> 仓库及配置</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">git</span> config user.name <span class="token string">&quot;your username&quot;</span>
+<span class="token function">git</span> config user.email <span class="token string">&quot;your email&quot;</span>
+</code></pre></div><p>以上这种配置，在当前 <code>git repository</code> 生效，会在当前 <code>repository/.git/config</code> 中生成对应的记录，只在当前目录有效</p> <h2 id="利用-include-includeif-实现不同文件夹下不同的git配置"><a href="#利用-include-includeif-实现不同文件夹下不同的git配置" class="header-anchor">#</a> 利用 include/includeif 实现不同文件夹下不同的git配置</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>只有git版本大于2.13才能用</p></div> <p>利用include/includeif可以实现在不同的目录加载不同的局部配置文件</p> <p><strong>步骤：</strong></p> <p>下面为.gitconfig文件：</p> <div class="language-text extra-class"><pre class="language-text"><code>[user]
+	name = yourGlobalName
+	email = yourGlobalEmail
+[includeIf &quot;gitdir:E:/study/gitdoc/&quot;]
+	path = .gitconfig-study.config
+</code></pre></div><p>下面为path路径中指定的.gitconfig-study.config</p> <div class="language-text extra-class"><pre class="language-text"><code>[user]
+	name = yourPrivateName
+	email = yourPrivateEmail
+</code></pre></div><p>注意：在博客中看到很多人在写只要 <code>.gitconfig-study.config</code> 放置的目录保持和path一致就行，但在本人电脑上莫名就是不行，最后无奈将 <code>.gitconfig-study.config</code> 放置在 <code>.gitconfig</code> 同一目录，最后生效。怀疑是在 windows 电脑上path 的写法有一定的特殊性，所以用相对目录可以成功。</p> <h2 id="验证"><a href="#验证" class="header-anchor">#</a> 验证</h2> <p>进入 <code>gitdir</code> 对应的目录，打开 <code>git bash</code>，输入 <code>git config user.name</code> 查看是否是自己配置的name</p> <h2 id="git-查找-user-name-和-user-email-的规则"><a href="#git-查找-user-name-和-user-email-的规则" class="header-anchor">#</a> git 查找 <code>user.name</code> 和 <code>user.email</code> 的规则</h2> <p>先判断是否是在git仓库？</p> <ul><li>是在 git 仓库
+<ul><li>有局部 config 的话，加载局部配置的 config</li> <li>没有局部的 config 的话，按照 include/includeif 加载</li></ul></li> <li>如果不是在git仓库
+<ul><li>如果全局配置了include/includeif，按照 include/includeif 加载</li> <li>如果全局没有配置 include/includeif， 直接获取全局配置</li></ul></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/git/更新代码.html" class="prev">
+        更新代码
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.00ee79c7.js" defer></script><script src="/blog/assets/js/2.e21738d3.js" defer></script><script src="/blog/assets/js/7.e96cff46.js" defer></script>
+  </body>
+</html>
